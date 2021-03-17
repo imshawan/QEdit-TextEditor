@@ -18,6 +18,8 @@ namespace QEdit
         public string byteArray = null;
         public byte[] byteArrays;
         public string data = null;
+        public const string V = " ";
+        public int wordsCount;
 
         public QEdit()
         {
@@ -106,6 +108,10 @@ namespace QEdit
                 if (d == DialogResult.Yes)
 
                 { this.Close(); }
+                else if (d == DialogResult.No)
+                {
+                    e.Cancel = true;
+                }
             }
         }
 
@@ -132,7 +138,7 @@ namespace QEdit
 
         private void QEdit_Load(object sender, EventArgs e)
         {
-
+            timer1.Start();
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -347,6 +353,29 @@ namespace QEdit
         {
             Forms.About about = new Forms.About();
             about.ShowDialog();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            string[] words = richTextBox1.Text.Split(V.ToCharArray());
+            wordsCount = words.Length;
+            if (wordsCountToolStripMenuItem.Checked)
+            {
+                label1.Text = "Words Count: " + wordsCount;
+            }
+        }
+
+        private void wordsCountToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (wordsCountToolStripMenuItem.Checked)
+            {
+                wordsCountToolStripMenuItem.Checked = false;
+                label1.Text = "";
+            }
+            else
+                wordsCountToolStripMenuItem.Checked = true;
+
+
         }
     }
 }

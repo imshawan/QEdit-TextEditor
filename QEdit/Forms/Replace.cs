@@ -30,5 +30,11 @@ namespace QEdit.Forms
             RichTextBox richTextBox1 = Application.OpenForms["QEdit"].Controls["richTextBox1"] as RichTextBox;
             richTextBox1.Text = richTextBox1.Text.Replace(textBox4.Text, textBox3.Text);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            textBox3.Text = "";
+            textBox4.Text = "";
+        }
     }
 }

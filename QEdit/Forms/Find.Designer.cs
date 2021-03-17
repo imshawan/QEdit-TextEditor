@@ -98,6 +98,7 @@ namespace QEdit.Forms
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Find";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Find";
             this.ResumeLayout(false);

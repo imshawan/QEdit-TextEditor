@@ -70,6 +70,9 @@ namespace QEdit
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.selectAllToolStripMenuItemClick = new System.Windows.Forms.ToolStripMenuItem();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
+            this.label1 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.wordsCountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -84,7 +87,7 @@ namespace QEdit
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(982, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(982, 30);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -290,7 +293,8 @@ namespace QEdit
             // formatToolStripMenuItem
             // 
             this.formatToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fontToolStripMenuItem});
+            this.fontToolStripMenuItem,
+            this.wordsCountToolStripMenuItem});
             this.formatToolStripMenuItem.Name = "formatToolStripMenuItem";
             this.formatToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
             this.formatToolStripMenuItem.Text = "Format";
@@ -299,7 +303,7 @@ namespace QEdit
             // 
             this.fontToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("fontToolStripMenuItem.Image")));
             this.fontToolStripMenuItem.Name = "fontToolStripMenuItem";
-            this.fontToolStripMenuItem.Size = new System.Drawing.Size(121, 26);
+            this.fontToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.fontToolStripMenuItem.Text = "Font";
             this.fontToolStripMenuItem.Click += new System.EventHandler(this.fontToolStripMenuItem_Click);
             // 
@@ -315,7 +319,7 @@ namespace QEdit
             // 
             this.aboutQEditToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("aboutQEditToolStripMenuItem.Image")));
             this.aboutQEditToolStripMenuItem.Name = "aboutQEditToolStripMenuItem";
-            this.aboutQEditToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.aboutQEditToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.aboutQEditToolStripMenuItem.Text = "About QEdit";
             this.aboutQEditToolStripMenuItem.Click += new System.EventHandler(this.aboutQEditToolStripMenuItem_Click);
             // 
@@ -414,12 +418,37 @@ namespace QEdit
             this.selectAllToolStripMenuItemClick.Size = new System.Drawing.Size(192, 24);
             this.selectAllToolStripMenuItemClick.Text = "Select All";
             // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(818, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 18);
+            this.label1.TabIndex = 2;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // wordsCountToolStripMenuItem
+            // 
+            this.wordsCountToolStripMenuItem.Name = "wordsCountToolStripMenuItem";
+            this.wordsCountToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.wordsCountToolStripMenuItem.Text = "Show Words Count";
+            this.wordsCountToolStripMenuItem.Click += new System.EventHandler(this.wordsCountToolStripMenuItem_Click);
+            // 
             // QEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(982, 583);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.menuStrip1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -479,6 +508,9 @@ namespace QEdit
         private System.Windows.Forms.ToolStripMenuItem selectAllToolStripMenuItemClick;
         public System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.FontDialog fontDialog1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ToolStripMenuItem wordsCountToolStripMenuItem;
     }
 }
 

@@ -36,6 +36,7 @@ namespace QEdit.Forms
             this.button4 = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button3
@@ -92,11 +93,22 @@ namespace QEdit.Forms
             this.label4.TabIndex = 8;
             this.label4.Text = "Replace With:";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(27, 132);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(110, 34);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Reset";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Replace
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(582, 193);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox3);
@@ -108,6 +120,7 @@ namespace QEdit.Forms
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Replace";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Find And Replace";
             this.Load += new System.EventHandler(this.FindAndReplace_Load);
@@ -123,5 +136,6 @@ namespace QEdit.Forms
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button1;
     }
 }
