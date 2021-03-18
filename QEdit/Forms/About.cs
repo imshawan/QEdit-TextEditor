@@ -23,7 +23,7 @@ namespace QEdit.Forms
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://github.com/imshawan/QEdit-text-editor");
+            System.Diagnostics.Process.Start("https://github.com/imshawan/QEdit-TextEditor");
         }
     }
 }

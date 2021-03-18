@@ -78,10 +78,11 @@ namespace QEdit.Forms
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(15, 25);
+            this.pictureBox1.Location = new System.Drawing.Point(29, 27);
+            this.pictureBox1.MaximumSize = new System.Drawing.Size(96, 96);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(96, 96);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.Size = new System.Drawing.Size(70, 70);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
@@ -131,10 +132,10 @@ namespace QEdit.Forms
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.Location = new System.Drawing.Point(154, 422);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(293, 17);
+            this.linkLabel2.Size = new System.Drawing.Size(294, 17);
             this.linkLabel2.TabIndex = 6;
             this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "https://github.com/imshawan/QEdit-text-editor";
+            this.linkLabel2.Text = "https://github.com/imshawan/QEdit-TextEditor";
             this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // label7
