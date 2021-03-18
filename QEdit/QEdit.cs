@@ -249,7 +249,7 @@ namespace QEdit
 
         private void cutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            richTextBox1.Cut();
         }
 
         private void pasteToolStripMenuItem_Click(object sender, EventArgs e)
